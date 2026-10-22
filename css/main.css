@@ -1,0 +1,8 @@
+/* main.css – nạp các file CSS theo thứ tự: màu → dùng chung → từng trang */
+@import "theme.css";
+@import "base.css";
+@import "home.css";
+@import "about.css";
+@import "projects.css";
+@import "cv.css";
+@import "contact.css";

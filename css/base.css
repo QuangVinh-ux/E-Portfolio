@@ -1,0 +1,53 @@
+/* base.css – phần dùng chung cho mọi trang: reset, menu, nút, tiêu đề trang, footer */
+/* ===== Reset & nền ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+ul { list-style: none; }
+body {
+  font-family: var(--font-body); color: var(--text); line-height: 1.7; background-color: var(--bg);
+  background-image: repeating-linear-gradient(45deg, rgba(74,90,223,.05) 0 1px, transparent 1px 9px);
+}
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.container { width: 100%; max-width: var(--max); margin-inline: auto; padding-inline: 20px; }
+section { padding-block: 80px; }
+h1, h2, h3 { font-family: var(--font-head); line-height: 1.15; }
+h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 12px; }
+h2::after { content: ""; display: block; width: 56px; height: 4px; margin-top: 10px; background: var(--accent); border-radius: 4px; }
+.lead { color: var(--muted); max-width: 62ch; margin-top: 16px; }
+.alt { background: var(--bg-2); }
+
+/* ===== Menu ===== */
+.navbar { position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+.nav { display: flex; justify-content: space-between; align-items: center; padding-block: 12px; gap: 16px; }
+.logo { font-family: var(--font-head); font-weight: 800; font-size: 1.3rem; color: var(--accent); text-decoration: none; }
+.menu { display: flex; flex-wrap: wrap; gap: 6px 22px; }
+.menu a { color: var(--text); text-decoration: none; font-weight: 500; }
+.menu a:hover { color: var(--accent); }
+
+/* ===== Nút ===== */
+.btns { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 24px; }
+.btn { display: inline-block; padding: 12px 26px; border: 0; border-radius: 999px; font: 700 1rem var(--font-body); text-decoration: none; cursor: pointer; background: var(--accent); color: var(--on-accent); transition: transform .2s; }
+.btn.ghost { background: transparent; color: var(--text); border: 2px solid var(--muted); }
+.btn:hover { transform: translateY(-3px); }
+
+/* ===== Dùng chung ===== */
+.hello { color: var(--accent-2); font-weight: 700; }
+@keyframes rise { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: none; } }
+@keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+.info { background: var(--card); border-radius: var(--radius); padding: 24px; }
+.info li { display: flex; justify-content: space-between; gap: 12px; padding-block: 10px; border-bottom: 1px solid var(--line); }
+.info li:last-child { border: 0; } .info b { color: var(--accent-2); }
+.info { border: 1px solid var(--line); }
+.page-head { padding-block: 72px 24px; }
+.page-head h1 { font-size: clamp(2.2rem, 6vw, 3.6rem); }
+.menu a[aria-current="page"] { color: var(--accent); border-bottom: 2px solid var(--accent); }
+.btn { box-shadow: 0 6px 14px rgba(74,90,223,.3); }
+.btn.ghost { box-shadow: none; color: var(--accent); border-color: var(--accent); }
+footer { text-align: center; padding-block: 32px; color: var(--muted); border-top: 1px solid var(--line); }
+footer a { color: var(--accent-2); margin-inline: 8px; }
+@media (max-width: 800px) {
+  section { padding-block: 52px; }
+  .nav { flex-direction: column; gap: 6px; }
+  .menu { justify-content: center; gap: 4px 16px; font-size: .95rem; }
+}
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }

@@ -1,0 +1,19 @@
+/* about.css – Giới thiệu: mục tiêu, sở thích, kỹ năng, thanh công cụ chạy ngang */
+.about { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+.skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 32px; }
+.panel { background: var(--card); border-radius: var(--radius); padding: 28px; }
+.panel h3 { font-size: 1.4rem; margin-bottom: 16px; }
+.panel p + p { margin-top: 10px; }
+.panel { border: 1px solid var(--line); }
+.soft { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; }
+.soft li { background: var(--bg-2); border-radius: 12px; padding: 14px; display: flex; gap: 10px; align-items: center; }
+.soft span { font-size: 1.5rem; }
+.marquee { overflow: hidden; margin-top: 36px; mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); }
+.track { display: flex; gap: 16px; width: max-content; animation: scroll 28s linear infinite; }
+.marquee:hover .track { animation-play-state: paused; }
+.tool { padding: 10px 22px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; font-weight: 500; white-space: nowrap; }
+@keyframes scroll { to { transform: translateX(calc(-50% - 8px)); } }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 28px; }
+.checks li { position: relative; padding: 5px 0 5px 26px; color: var(--muted); }
+.checks li::before { content: "✓"; position: absolute; left: 0; color: var(--accent); font-weight: 800; }
+@media (max-width: 800px) { .about, .skills-grid { grid-template-columns: 1fr; } }

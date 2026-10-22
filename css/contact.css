@@ -1,0 +1,9 @@
+/* contact.css – Liên hệ: thông tin, địa chỉ, mạng xã hội */
+.contact-single { max-width: 680px; padding-top: 72px; }
+.social { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+.social a { padding: 8px 22px; border-radius: 999px; background: var(--card); border: 1px solid var(--line); color: var(--text); text-decoration: none; font-weight: 500; transition: transform .2s, border-color .2s; }
+.social a:hover { transform: translateY(-3px); border-color: var(--accent); }
+.addr { background: var(--card); border-radius: var(--radius); padding: 22px 24px; margin-top: 24px; }
+.addr h3 { color: var(--accent); margin-bottom: 4px; }
+.addr a { color: var(--accent-2); }
+.addr { border: 1px solid var(--line); }

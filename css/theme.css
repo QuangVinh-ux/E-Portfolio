@@ -1,0 +1,16 @@
+/* theme.css – đổi màu, font, kích thước cả trang tại đây (giao diện nền trắng) */
+:root {
+  --bg: #ffffff;
+  --bg-2: #f1f2ff;        /* nền lavender nhạt */
+  --card: #ffffff;
+  --text: #1b1f4b;
+  --muted: #555a7e;
+  --accent: #4a5adf;      /* xanh tím: nút, tiêu đề nhấn */
+  --accent-2: #6d4fd8;    /* tím: nhãn nhỏ, liên kết */
+  --on-accent: #ffffff;   /* màu chữ nằm trên nền accent */
+  --line: rgba(27, 31, 75, .12);
+  --radius: 16px;
+  --max: 1080px;
+  --font-head: "Bricolage Grotesque", system-ui, sans-serif;
+  --font-body: "Be Vietnam Pro", system-ui, sans-serif;
+}

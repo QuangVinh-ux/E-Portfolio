@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trang chủ – Nguyễn Quang Vinh</title>
+  <link rel="icon" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Bricolage+Grotesque:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="navbar">
+    <nav class="container nav" aria-label="Menu chính">
+      <a class="logo" href="index.html">Nguyễn Quang Vinh</a>
+      <ul class="menu">
+        <li><a href="index.html" aria-current="page">Trang chủ</a></li>
+        <li><a href="about.html" >Giới thiệu</a></li>
+        <li><a href="projects.html" >Dự án</a></li>
+        <li><a href="cv.html" >CV</a></li>
+        <li><a href="contact.html" >Liên hệ</a></li>
+      </ul>
+    </nav>
+  </div>
+  <main>
+    <header class="container hero">
+      <div class="who">
+        <div class="photo">
+          <span aria-hidden="true">HV</span>
+          <img src="assets/avatart.jpg" alt="Ảnh đại diện của Nguyễn Quang Vinh">
+        </div>
+        <div>
+          <p class="hello">👋 Xin chào, mình là</p>
+          <h1>Họ và Tên</h1>
+          <ul class="roles"><li>Lập trình PLC</li><li>AutoCAD Electrical</li></ul>
+          <p class="goal">Mong muốn ứng tuyển vị trí bảo trì máy trong lĩnh vực tự động hoá.</p>
+        </div>
+      </div>
+      <aside class="contact-box">
+        <h2>Thông tin liên hệ</h2>
+        <ul><li>✉️ <a href="mailto:email@example.com">email@example.com</a></li><li>📞 <a href="tel:0900000000">0900 000 000</a></li><li>📍 TP. Hồ Chí Minh</li></ul>
+      </aside>
+    </header>
+
+    <section class="container intro-wrap">
+      <img class="deco robot" src="assets/robot.png" alt="" aria-hidden="true">
+      <div class="intro">
+        <h2>Giới thiệu bản thân</h2>
+        <p>Xin chào, mình là Họ và Tên, đang làm việc trong lĩnh vực tự động hoá công nghiệp. Mình có nền tảng về lập trình PLC, giao tiếp Modbus RTU, xử lý tín hiệu analog và encoder, đồng thời thiết kế bản vẽ điện bằng AutoCAD Electrical. Hiện mình đang tìm cơ hội ở vị trí bảo trì máy hoặc lập trình PLC.</p>
+        <div class="btns"><a class="btn" href="CV.pdf" download>Tải CV</a><a class="btn ghost" href="projects.html">Xem dự án</a></div>
+      </div>
+      <svg class="deco laptop" viewBox="0 0 140 110" aria-hidden="true"><rect x="30" y="8" width="80" height="56" rx="8" fill="#5b7cff" stroke="#4a3fb8" stroke-width="3"/><rect x="40" y="18" width="60" height="36" rx="4" fill="#7dd3fc"/><path d="M14 74h112l-10 22H24z" fill="#c7d2fe" stroke="#4a3fb8" stroke-width="3" stroke-linejoin="round"/></svg>
+    </section>
+
+    <section class="container">
+      <h2>Mình có thể giúp gì cho bạn?</h2>
+      <p class="lead">Ba mảng công việc mình làm tốt nhất trong lĩnh vực tự động hoá.</p>
+      <div class="services">
+        <div class="service"><span>🔌</span><h3>Lập trình PLC</h3><p>Viết chương trình điều khiển cho PLC Siemens, Mitsubishi và Omron.</p></div>
+        <div class="service"><span>🛠️</span><h3>Lắp ráp tủ điện</h3><p>Lắp và đấu nối tủ điều khiển gọn gàng, dễ bảo trì.</p></div>
+        <div class="service"><span>🔧</span><h3>Bảo trì máy</h3><p>Chẩn đoán lỗi và giữ cho dây chuyền hoạt động ổn định.</p></div>
+      </div>
+    </section>
+
+    <section class="container" style="padding-block:24px 0">
+      <blockquote class="quote big">“Không bao giờ là thất bại, tất cả là thử thách.”<cite>— Chung Ju Yung, sáng lập Hyundai</cite></blockquote>
+    </section>
+
+    <section style="margin-top:56px"><div class="container">
+      <h2>Dự án nổi bật</h2>
+      <div class="projects">
+        <a class="project" href="projects.html#proj-1"><div class="thumb"><span>🏆</span><img src="assets/td.jpg" alt=""></div><div class="project-info"><small>Dự án 1</small><h3>Giải 3 thi lắp tủ điện</h3></div></a>
+        <a class="project" href="projects.html#proj-2"><div class="thumb"><span>⚙️</span><img src="assets/pid.jpg" alt=""></div><div class="project-info"><small>Dự án 2</small><h3>Mô phỏng hệ thống chiết rót điều khiển bằng pid</h3></div></a>
+        <a class="project" href="projects.html#proj-3"><div class="thumb"><span>📦</span><img src="assets/Sunsco.jpg" alt=""></div><div class="project-info"><small>Dự án 3</small><h3>Đấu nối tủ điều khiển động cơ servo</h3></div></a>
+      </div>
+      <div class="btns"><a class="btn ghost" href="projects.html">Xem tất cả dự án</a></div>
+    </div></section>
+    <section class="container"><div class="cta">
+      <h2>Cùng làm việc nhé?</h2>
+      <p class="lead" style="margin-inline:auto">Mình đang tìm cơ hội ở vị trí bảo trì máy hoặc lập trình PLC.</p>
+      <div class="btns"><a class="btn" href="contact.html">Liên hệ mình</a></div>
+    </div></section>
+  </main>
+  <footer><p>© 2026 Nguyễn Quang Vinh – E-Portfolio</p></footer>
+</body>
+</html>
