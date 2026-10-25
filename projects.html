@@ -179,18 +179,28 @@
   </main>
   <footer><p>© 2026 Nguyễn Quang Vinh – E-Portfolio</p></footer>
   <script>
-  // Mở video nào thì tự phát video đó, đóng thì tự dừng
+  addEventListener('hashchange', () => {
+    document.querySelectorAll('.lightbox video').forEach(v => v.pause());
+    document.querySelectorAll('.lightbox iframe').forEach(f => { f.src = f.src; });
+  });
+</script>
+<script>
+  // Mở khung nào thì mới nạp/phát video của khung đó; đóng thì gỡ ra để dừng hẳn
   function syncVideos() {
-    document.querySelectorAll('.lightbox video').forEach(v => {
-      if (v.closest('.lightbox').matches(':target')) {
-        v.play().catch(() => {});   // nếu trình duyệt chặn thì người xem bấm ▶ trên thanh điều khiển
-      } else {
-        v.pause();
-      }
+    document.querySelectorAll('.lightbox').forEach(box => {
+      const open = box.matches(':target');
+      box.querySelectorAll('iframe[data-src]').forEach(f => {
+        if (open && !f.getAttribute('src')) f.setAttribute('src', f.dataset.src);
+        if (!open && f.getAttribute('src')) f.removeAttribute('src');
+      });
+      box.querySelectorAll('video').forEach(v => {
+        if (open) v.play().catch(() => {}); else v.pause();
+      });
     });
   }
   addEventListener('hashchange', syncVideos);
   addEventListener('load', syncVideos);
+</script>;
 </script>
 </body>
 </html>
