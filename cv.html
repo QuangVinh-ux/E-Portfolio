@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CV – Nguyễn Quang Vinh</title>
+  <title>CV – Họ và Tên</title>
   <link rel="icon" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +13,7 @@
 <body>
   <div class="navbar">
     <nav class="container nav" aria-label="Menu chính">
-      <a class="logo" href="index.html">Nguyễn Quang Vinh</a>
+      <a class="logo" href="index.html">Họ Tên.</a>
       <ul class="menu">
         <li><a href="index.html" >Trang chủ</a></li>
         <li><a href="about.html" >Giới thiệu</a></li>
@@ -24,17 +24,17 @@
     </nav>
   </div>
   <main>
-    <section class="container cv-download">
-      <div class="cv-card">
-        <span class="cv-icon" aria-hidden="true">📄</span>
-        <h1>Hồ sơ tuyển dụng (CV)</h1>
-        <p class="lead">Bạn có thể tải CV của mình tại đây.</p>
-        <!-- FILE CV: đặt file vào cùng thư mục với index.html rồi sửa tên ở href bên dưới.
-             Ví dụ file PDF: CV.pdf — file ảnh: CV.jpg hoặc CV.png (đổi đúng tên và đuôi file của bạn). -->
-        <div class="btns"><a class="btn" href="CV.pdf" download>Tải CV</a></div>
-      </div>
+    <section class="container cv-page">
+      <h1>Hồ sơ tuyển dụng (CV)</h1>
+      <p class="lead">Xem CV của mình bên dưới, bấm nút để tải về.</p>
+      <!-- ẢNH CV: đặt ảnh vào thư mục assets với tên cv.jpg (nếu ảnh của bạn là .png hoặc tên khác thì sửa 2 chỗ src/href bên dưới cho khớp).
+           Bấm vào ảnh sẽ mở ảnh kích thước đầy đủ trong tab mới. -->
+      <figure class="cv-sheet">
+        <a href="assets/CV.png" target="_blank" rel="noopener" aria-label="Mở ảnh CV kích thước đầy đủ"><img src="assets/CV.png" alt=""></a>
+      </figure>
+      <div class="btns"><a class="btn" href="assets/CV.pdf" download="CV_NguyenQuangVinh.pdf">Tải CV</a></div>
     </section>
   </main>
-  <footer><p>© 2026 Nguyễn Quang Vinh – E-Portfolio</p></footer>
+  <footer><p>© 2026 Họ và Tên – E-Portfolio</p></footer>
 </body>
 </html>

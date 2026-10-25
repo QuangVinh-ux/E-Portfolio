@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "code",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "mtikcode-simple-portfolio-main"
+	}
+}
