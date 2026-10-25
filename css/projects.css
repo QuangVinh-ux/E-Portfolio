@@ -25,7 +25,7 @@
 /* ----- Cửa sổ dự án: tên, mô tả, lưới ảnh nhỏ ----- */
 .modal { position: fixed; inset: 0; z-index: 50; display: none; align-items: center; justify-content: center; padding: 20px; }
 .modal:target, .modal:has(.lightbox:target) { display: flex; }
-.modal .backdrop { position: absolute; inset: 0; background: rgba(27,31,75,.55); backdrop-filter: blur(6px); animation: fade .3s ease both; }
+.modal .backdrop { position: absolute; inset: 0; background: rgba(27,31,75,.7); animation: fade .3s ease both; }
 .modal .box { position: relative; width: 100%; max-width: 700px; max-height: 92vh; overflow: auto; padding: 32px; background: #fff; border-radius: 28px; box-shadow: 0 30px 70px rgba(27,31,75,.4); animation: pop .4s cubic-bezier(.2,.9,.3,1.2) backwards; }
 @keyframes pop { from { opacity: 0; transform: translateY(24px) scale(.92); } to { opacity: 1; transform: none; } }
 .modal h2 { font-size: 1.6rem; padding-right: 40px; }
@@ -63,5 +63,10 @@
 /* ----- Video trong dự án: ô nhỏ có nút ▶, bấm vào mở khung phát video lớn ----- */
 .g > a.video::after { content: "▶"; position: absolute; inset: 0; z-index: 2; display: grid; place-items: center; color: #fff; font-size: 2rem; background: rgba(15,19,51,.38); transition: background .25s; }
 .g > a.video:hover::after { background: rgba(15,19,51,.15); }
-.lb-video { position: relative; width: min(92vw, 1100px); aspect-ratio: 16 / 9; max-height: 90vh; overflow: hidden; border-radius: 16px; background: #000; box-shadow: 0 20px 60px rgba(0,0,0,.6); animation: pop .35s cubic-bezier(.2,.9,.3,1.1) backwards; }
+.lb-video { position: relative; width: min(92vw, 1100px); aspect-ratio: 16 / 9; max-height: 90vh; overflow: hidden; border-radius: 16px; background: #000; box-shadow: 0 20px 60px rgba(0,0,0,.6); }
 .lb-video video, .lb-video iframe { display: block; width: 100%; height: 100%; border: 0; }
+
+/* ----- Giảm tải khi xem video/ảnh lớn: ẩn cửa sổ dự án phía sau, chỉ vẽ khung đang xem ----- */
+.modal:has(.lightbox:target) .box { visibility: hidden; }
+.lightbox:target { visibility: visible; }
+.lb-video { will-change: auto; }
