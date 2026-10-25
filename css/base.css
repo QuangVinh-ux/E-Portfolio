@@ -63,3 +63,7 @@ footer p { line-height: 1.6; }
 footer p + p { margin-top: 10px; }
 footer p:first-child { font-size: .9rem; }
 footer p + p { color: var(--text); font-weight: 500; }
+
+/* ===== Giữ bố cục không bị xê dịch giữa trang dài (có thanh cuộn) và trang ngắn (không có) ===== */
+html { scrollbar-gutter: stable; }
+@supports not (scrollbar-gutter: stable) { html { overflow-y: scroll; } }
