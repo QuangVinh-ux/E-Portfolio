@@ -1,0 +1,12 @@
+/* email.css – Email ứng tuyển: khung thư giống tờ giấy, nút sao chép bên dưới */
+.email-page { padding-block: 64px 96px; text-align: center; }
+.email-page h1 { font-size: clamp(1.8rem, 5vw, 2.6rem); }
+.email-page .lead { margin-inline: auto; }
+.email-sheet { max-width: 760px; margin: 32px auto 0; padding: clamp(20px, 5vw, 44px); text-align: left; background: #fff; border: 1px solid var(--line); border-radius: 20px; box-shadow: 0 18px 50px rgba(27,31,75,.16); }
+.email-subject { padding-bottom: 16px; margin-bottom: 20px; border-bottom: 1px solid var(--line); }
+.email-subject strong { color: var(--accent-2); }
+.email-sheet #mail-body p + p { margin-top: 16px; }
+.email-sign { line-height: 1.8; }
+.email-sheet a { color: var(--accent); }
+.email-page .btns { justify-content: center; margin-top: 28px; }
+.email-status { min-height: 1.7em; margin-top: 12px; color: var(--accent-2); font-weight: 500; }

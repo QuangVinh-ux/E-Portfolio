@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Email – Nguyễn Quang Vinh</title>
+  <link rel="icon" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Bricolage+Grotesque:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="navbar">
+    <nav class="container nav" aria-label="Menu chính">
+      <a class="logo" href="index.html">Nguyễn Quang Vinh</a>
+      <ul class="menu">
+        <li><a href="index.html" >Trang chủ</a></li>
+        <li><a href="about.html" >Giới thiệu</a></li>
+        <li><a href="projects.html" >Dự án</a></li>
+        <li><a href="cv.html" >CV</a></li>
+        <li><a href="email.html" aria-current="page">Email</a></li>
+        <li><a href="contact.html" >Liên hệ</a></li>
+      </ul>
+    </nav>
+  </div>
+  <main>
+    <section class="container email-page">
+      <h1>Email ứng tuyển</h1>
+      <p class="lead">Nội dung email mình gửi kèm CV khi ứng tuyển.</p>
+
+      <article class="email-sheet" aria-label="Nội dung email ứng tuyển">
+        <p class="email-subject"><strong>Tiêu đề:</strong> <span id="mail-subject">Ứng tuyển vị trí Nhân viên Bảo trì Điện – Nguyễn Quang Vinh</span></p>
+
+        <div id="mail-body">
+          <p>Kính gửi Bộ phận Tuyển dụng Công ty Cổ phần Maruichi Sun Steel (SUNSCO),</p>
+
+          <p>Em tên là Nguyễn Quang Vinh, hiện là sinh viên năm 4 ngành Kỹ thuật Cơ điện tử tại Trường Đại học Lạc Hồng.</p>
+
+          <p>Trước đây, em đã có 2 tháng thực tập tại quý công ty ở bộ phận Bảo trì Điện. Qua thời gian thực tập, em có cơ hội tìm hiểu môi trường làm việc và tích lũy kinh nghiệm thực tế trong lĩnh vực bảo trì điện.</p>
+
+          <p>Hiện tại, em mong muốn được ứng tuyển vào vị trí Nhân viên Bảo trì Điện tại công ty để tiếp tục phát triển chuyên môn và đóng góp vào hoạt động sản xuất. Em có kiến thức về PLC, hệ thống điện công nghiệp, lắp ráp và đấu nối tủ điện cơ bản. Em cũng luôn sẵn sàng học hỏi, nâng cao kỹ năng và hoàn thành tốt các nhiệm vụ được giao.</p>
+
+          <p>Em xin gửi kèm CV để quý công ty xem xét. Em rất mong có cơ hội được làm việc và phát triển lâu dài tại SUNSCO.</p>
+
+          <p>Em xin chân thành cảm ơn quý công ty đã dành thời gian xem xét hồ sơ của em. Em mong sớm nhận được phản hồi.</p>
+
+          <p>Trân trọng,</p>
+
+          <p class="email-sign"><strong>Nguyễn Quang Vinh</strong><br>
+            Số điện thoại: 0334197974<br>
+            Email: <a>q.vinhz1411@gmail.com</a></p>
+        </div>
+      </article>
+
+      <div class="btns">
+
+      </div>
+      <p class="email-status" id="copy-status" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+  <footer><p>© 2026 Nguyễn Quang Vinh E-Portfolio</p><p>Cảm ơn bạn đã dành thời gian xem hồ sơ của mình</p></footer>
+
+  <script>
+    (function () {
+      var subject = document.getElementById('mail-subject').textContent.trim();
+      var paragraphs = document.querySelectorAll('#mail-body p');
+      var body = Array.prototype.map.call(paragraphs, function (p) {
+        return p.innerText.trim();
+      }).join('\n\n');
+    })();
+  </script>
+</body>
+</html>
